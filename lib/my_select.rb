@@ -2,8 +2,9 @@ def my_select(collection)
  i=0
  b=[]
  while i<collection.length
-    b.push collection[i]
+    if yield (collection[i])
+      b.push collection[i]
+    end
     i=i+1
   end
-  b
 end
